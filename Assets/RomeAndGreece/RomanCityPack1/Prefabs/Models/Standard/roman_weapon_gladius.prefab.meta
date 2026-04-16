@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b92dd5498bed24a478dd22fc0e1689fc
+timeCreated: 1498775103
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 136639
+  packageName: Rome and Greece Low Poly Bundle
+  packageVersion: 1.0
+  assetPath: Assets/RomeAndGreece/RomanCityPack1/Prefabs/Models/Standard/roman_weapon_gladius.prefab
+  uploadId: 289017
