@@ -84,9 +84,8 @@ public class TutorialScrpit : MonoBehaviour
         }
         if (hasWalkedThroughEPOne == true && numberForTutorialWall == 4)
         {
-            tutorialText.text = "Welcome";
+            tutorialText.text = "Welcome\nTo the Fighting Grounds";
             numberForTutorialWall++;
-            WaitForTextChange();
         }
     }
 
@@ -107,18 +106,6 @@ public class TutorialScrpit : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
         {
             hasSprinted = true;
-        }
-    }
-
-    public void WaitForTextChange()
-    {
-        float startTime = Time.deltaTime;
-        while (timer < waitTime + startTime)
-        {
-            if (timer >= waitTime + startTime)
-            {
-                tutorialText.text = "To the Fighting Grounds.";
-            }
         }
     }
 }

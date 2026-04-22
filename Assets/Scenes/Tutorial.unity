@@ -641,6 +641,7 @@ MonoBehaviour:
   hasClimbedLadder: 0
   hasPassedHouse: 0
   hasWalkedThroughEPOne: 0
+  timer: 0
   hasSprinted: 0
   tutorialText: {fileID: 667611133}
 --- !u!1 &389078533
@@ -2576,8 +2577,8 @@ GameObject:
   - component: {fileID: 1138118361}
   - component: {fileID: 1138118360}
   - component: {fileID: 1138118359}
-  - component: {fileID: 1138118358}
   - component: {fileID: 1138118362}
+  - component: {fileID: 1138118363}
   m_Layer: 0
   m_Name: Ember point
   m_TagString: Untagged
@@ -2585,28 +2586,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1138118358
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138118357}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1138118359
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2686,6 +2665,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1138118357}
   tutorialScript: {fileID: 385166990}
+--- !u!65 &1138118363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138118357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 8.492633, z: 10}
+  m_Center: {x: -5.7286024e-16, y: -2.1620429, z: 0}
 --- !u!1 &1168810305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1885233654702110, guid: 4722a4ca2c1424236aa783f92b7d57c1, type: 3}
