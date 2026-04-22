@@ -12,6 +12,19 @@ public class TutorialScrpit : MonoBehaviour
 
     [SerializeField] private bool hasJumped = false;
 
+    public bool hasWalkedIntoNewArea = false;
+    private int numberForTutorialWall = 0;
+
+    public bool hasClimbedLadder = false;
+    public bool hasPassedHouse = false;
+
+    public bool hasWalkedThroughEPOne = false;
+
+    public float timer = 0f;
+    private float waitTime = 200.0f;
+
+    [SerializeField] private bool hasSprinted = false;
+
     public Text tutorialText;
     void Start()
     {
@@ -43,6 +56,68 @@ public class TutorialScrpit : MonoBehaviour
             {
                 hasJumped = true;
                 tutorialText.text = "Awesome, now walk to the next area.";
+            }
+        }
+        if(hasWalkedIntoNewArea == true && numberForTutorialWall <= 0)
+        {
+            tutorialText.text = "Good job! \nNow hold SHIFT while moving to sprint.";
+            numberForTutorialWall++;
+        }
+        if (hasWalkedIntoNewArea == true && numberForTutorialWall == 1)
+        {
+            CheckIfSprinted();
+            if (hasSprinted == true)
+            {
+                tutorialText.text = "You're getting the hang of it! \nNow go ahead and climb up that ladder.";
+                numberForTutorialWall++;
+            }
+        }
+        if (hasClimbedLadder == true && numberForTutorialWall == 2)
+        {
+            tutorialText.text = "Now that you've climbed the ladder,\njump down on the other side of the house.";
+            numberForTutorialWall++;
+        }
+        if (hasPassedHouse == true && numberForTutorialWall == 3)
+        {
+            tutorialText.text = "You see that portal like thing?\nThat's an Ember Point. Walk through it.";
+            numberForTutorialWall++;
+        }
+        if (hasWalkedThroughEPOne == true && numberForTutorialWall == 4)
+        {
+            tutorialText.text = "Welcome";
+            numberForTutorialWall++;
+            WaitForTextChange();
+        }
+    }
+
+    public void CheckIfSprinted()
+    {
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        {
+            hasSprinted = true;
+        }
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        {
+            hasSprinted = true;
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+        {
+            hasSprinted = true;
+        }
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+        {
+            hasSprinted = true;
+        }
+    }
+
+    public void WaitForTextChange()
+    {
+        float startTime = Time.deltaTime;
+        while (timer < waitTime + startTime)
+        {
+            if (timer >= waitTime + startTime)
+            {
+                tutorialText.text = "To the Fighting Grounds.";
             }
         }
     }
