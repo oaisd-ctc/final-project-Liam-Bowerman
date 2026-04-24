@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class TutorialScrpit : MonoBehaviour
 {
+    public GameObject player;
+    public Transform destination;
+
     [SerializeField] private bool hasPressedW = false;
     [SerializeField] private bool hasPressedS = false;
     [SerializeField] private bool hasPressedA = false;
@@ -85,6 +88,22 @@ public class TutorialScrpit : MonoBehaviour
         if (hasWalkedThroughEPOne == true && numberForTutorialWall == 4)
         {
             tutorialText.text = "Welcome\nTo the Fighting Grounds";
+            CharacterController cc = player.GetComponent<CharacterController>();
+            if (cc != null)
+            {
+                // 1. Disable the Character Controller
+                cc.enabled = false;
+
+                // 2. Teleport the character
+                player.transform.position = destination.position;
+                player.transform.rotation = destination.rotation;
+
+                // 3. Manually sync the physics transform
+                Physics.SyncTransforms();
+
+                // 4. Re-enable the Character Controller
+                cc.enabled = true;
+            }
             numberForTutorialWall++;
         }
     }
