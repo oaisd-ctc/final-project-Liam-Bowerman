@@ -299,12 +299,12 @@ GameObject:
   - component: {fileID: 272902066}
   - component: {fileID: 272902065}
   - component: {fileID: 272902064}
-  - component: {fileID: 272902063}
   - component: {fileID: 272902062}
   - component: {fileID: 272902067}
+  - component: {fileID: 272902068}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,27 +336,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &272902063
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272902061}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &272902064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -416,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 272902061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.064, y: 2.175, z: 10.35}
+  m_LocalPosition: {x: 10, y: 2.175, z: 10.35}
   m_LocalScale: {x: 1.5, y: 3.5746, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -438,6 +417,27 @@ MonoBehaviour:
   enemyHealth: 0
   dmgMultiplier: 1
   enemy: {fileID: 272902061}
+--- !u!65 &272902068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272902061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.0000001, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &306796686
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +611,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 628200630853299005, guid: 5a3ba2f14ad8e4442bddd5bbe1f75b65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1391849729}
+    - targetCorrespondingSourceObject: {fileID: 628200630853299005, guid: 5a3ba2f14ad8e4442bddd5bbe1f75b65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1391849732}
   m_SourcePrefab: {fileID: 100100000, guid: 5a3ba2f14ad8e4442bddd5bbe1f75b65, type: 3}
 --- !u!4 &935766729 stripped
 Transform:
@@ -628,12 +631,12 @@ GameObject:
   - component: {fileID: 1257963147}
   - component: {fileID: 1257963146}
   - component: {fileID: 1257963145}
-  - component: {fileID: 1257963144}
   - component: {fileID: 1257963143}
   - component: {fileID: 1257963148}
+  - component: {fileID: 1257963149}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,27 +668,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1257963144
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257963142}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1257963145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 1257963142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84751, y: 2.175, z: 10.35}
+  m_LocalPosition: {x: 0, y: 2.175, z: 10.35}
   m_LocalScale: {x: 1.5, y: 3.5746, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -766,7 +748,28 @@ MonoBehaviour:
   maxEnemyHealth: 100
   enemyHealth: 0
   dmgMultiplier: 1
-  enemy: {fileID: 0}
+  enemy: {fileID: 1257963142}
+--- !u!65 &1257963149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257963142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.0000001, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1391849725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 628200630853299005, guid: 5a3ba2f14ad8e4442bddd5bbe1f75b65, type: 3}
@@ -792,13 +795,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 471020601539687467, guid: 3e33ef42d936e5d4ba5b72155da98bba, type: 3}
+--- !u!114 &1391849732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391849725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c90444cbac8e354694a31242f0d5678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 0}
 --- !u!4 &1512230261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5307747622926812264, guid: 94af71a58c0c4854483fa5f0cef54696, type: 3}
@@ -815,12 +831,12 @@ GameObject:
   - component: {fileID: 2004839555}
   - component: {fileID: 2004839554}
   - component: {fileID: 2004839553}
-  - component: {fileID: 2004839552}
   - component: {fileID: 2004839551}
   - component: {fileID: 2004839556}
+  - component: {fileID: 2004839557}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -852,27 +868,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2004839552
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004839550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2004839553
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -932,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 2004839550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.214, y: 2.175, z: 10.35}
+  m_LocalPosition: {x: -10, y: 2.175, z: 10.35}
   m_LocalScale: {x: 1.5, y: 3.5746, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -953,7 +948,28 @@ MonoBehaviour:
   maxEnemyHealth: 100
   enemyHealth: 0
   dmgMultiplier: 1
-  enemy: {fileID: 0}
+  enemy: {fileID: 2004839550}
+--- !u!65 &2004839557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004839550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.0000001, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
