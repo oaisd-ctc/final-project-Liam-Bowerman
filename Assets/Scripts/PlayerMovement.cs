@@ -33,6 +33,30 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.W) && canMove)
+        {
+            animator.SetBool("IsMovingForward", true);
+        }
+        else
+        {
+            animator.SetBool("IsMovingForward", false);
+        }
+        if (Input.GetKey(KeyCode.A) && canMove)
+        {
+            animator.SetBool("IsMovingLeft", true);
+        }
+        else
+        {
+            animator.SetBool("IsMovingLeft", false);
+        }
+        if (Input.GetKey(KeyCode.D) && canMove)
+        {
+            animator.SetBool("IsMovingRight", true);
+        }
+        else
+        {
+            animator.SetBool("IsMovingRight", false);
+        }
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -79,13 +103,6 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
 
-        if (Input.GetKey(KeyCode.W) && canMove)
-        {
-            animator.SetBool("IsMovingForward", true);
-        }
-        else
-        {
-            animator.SetBool("IsMovingForward", false);
-        }
+        
     }
 }
