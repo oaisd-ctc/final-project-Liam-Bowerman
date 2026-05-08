@@ -9,9 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 712492a0865eb4c4899a0c97cf2fdaf4
   - enabled: 1
+    path: Assets/Scenes/BeforeEruption.unity
+    guid: ef69210712714734fa13b02555ea5c78
+  - enabled: 1
+    path: Assets/Scenes/DuringEruption.unity
+    guid: 36da912d8a7c5124cb082af459a4103a
+  - enabled: 1
+    path: Assets/Scenes/AfterEruption.unity
+    guid: d9c6fae500beb604ab9d60e14319036f
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: f384b4eee7e38b24890ed5acffd01a31
   - enabled: 1
+    path: Assets/Scenes/OptionsScreen.unity
+    guid: d080eb98fe6649a44ab5649c6bbf8405
+  - enabled: 1
     path: Assets/Scenes/TerrainMap.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9b19b759fd601c340af3e06c93d1be23
   m_configObjects: {}
