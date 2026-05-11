@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    public Enemy enemies;
+    public static GameObject playerSword;
+    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerSword = gameObject;
     }
 
     // Update is called once per frame
