@@ -15,9 +15,17 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (StoredVariables.hasSword == true)
+        {
+            Sword.playerSword.SetActive(true);
+        }
+        else
+        {
+            Sword.playerSword.SetActive(false);
+        }
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("You swing your sWord");
+            Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord"); Debug.Log("You swing your sWord");
         }
     }
 

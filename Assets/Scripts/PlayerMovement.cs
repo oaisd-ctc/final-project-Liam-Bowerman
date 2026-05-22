@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
@@ -33,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && StoredVariables.hasSword == true)
+        {
+            Debug.Log("You swing your sWord"); 
+        }
         if (Input.GetKey(KeyCode.W) && canMove)
         {
             animator.SetBool("IsMovingForward", true);
@@ -95,13 +98,13 @@ public class PlayerMovement : MonoBehaviour
 
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (canMove)
-        {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX - 90, 90, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        }
+        //if (canMove)
+        //{
+        //    rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+        //    rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        //    playerCamera.transform.localRotation = Quaternion.Euler(rotationX - 90, 90, 0);
+        //    transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        //}
 
         
     }
